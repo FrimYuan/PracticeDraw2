@@ -27,6 +27,8 @@ public class Sample16TextPathView extends View {
     }
 
     {
+        setLayerType(LAYER_TYPE_SOFTWARE, null); // 硬件加速下 ComposeShader 不能使用两个同类型的 Shader
+
         paint.setTextSize(120);
         paint.getTextPath(text, 0, text.length(), 50, 400, textPath);
 

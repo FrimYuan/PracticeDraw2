@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 
 import java.util.ArrayList;
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(pager);
+        pager.setCurrentItem(14);
+        Log.d("YGG", (0 % 5 )+ "");
+        Log.d("YGG", (1 % 5 )+ "");
+        Log.d("YGG", (6 % 5 )+ "");
+        Log.d("YGG", (12 % 5 )+ "");
     }
 
     @Override
@@ -72,9 +78,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class PageModel {
-        @LayoutRes int sampleLayoutRes;
-        @StringRes int titleRes;
-        @LayoutRes int practiceLayoutRes;
+        @LayoutRes
+        int sampleLayoutRes;
+        @StringRes
+        int titleRes;
+        @LayoutRes
+        int practiceLayoutRes;
 
         PageModel(@LayoutRes int sampleLayoutRes, @StringRes int titleRes, @LayoutRes int practiceLayoutRes) {
             this.sampleLayoutRes = sampleLayoutRes;
